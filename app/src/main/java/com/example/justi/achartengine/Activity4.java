@@ -29,7 +29,7 @@ import org.achartengine.renderer.XYSeriesRenderer;
 import java.util.ArrayList;
 
 public class Activity4 extends Activity {
-    private static int columnCount = 0;
+    private static int columnCount ;
     private GraphicalView mChart;
     protected SQLiteDatabase database;
    protected  CategorySeries distributionSeries = new CategorySeries("Pie Chart");
@@ -58,6 +58,7 @@ public class Activity4 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        columnCount = 0;
         final Context context = this;
         ArrayList<Double> expenseList = new ArrayList<Double>();
         ArrayList<Double> percentageList = new ArrayList<Double>();
@@ -84,7 +85,8 @@ public class Activity4 extends Activity {
 
         Button datainsertion = (Button) findViewById(R.id.datainsertion);
         final DatabaseHelper dh = new DatabaseHelper(this);
-        database = dh.getReadableDatabase();
+        database = dh.getWritableDatabase();
+       // database.execSQL("DELETE FROM summary where Type = 'gas'");
         String[] allColumns = {dh.ID, dh.type, dh.expenses};
         Cursor cursor = database.rawQuery("SELECT * FROM summary", null);
          if (cursor!=null) {
@@ -138,7 +140,7 @@ public class Activity4 extends Activity {
 
                     }
                     if (i==1){
-                        int[] colors = { Color.BLUE, Color.MAGENTA, Color.GREEN};
+                        int[] colors = { Color.BLUE, Color.MAGENTA, Color.GREEN, Color.CYAN};
                         DefaultRenderer defaultRenderer  = new DefaultRenderer();
 
                         for(int j = 0 ;j<columnCount;j++) {
@@ -150,7 +152,7 @@ public class Activity4 extends Activity {
                             // Adding a renderer for a slice
 
                             defaultRenderer.setChartTitleTextSize(10);
-                        defaultRenderer.setLabelsTextSize(10);
+                        defaultRenderer.setLabelsTextSize(30);
                             //defaultRenderer.setZoomButtonsVisible(true);
                             Intent intent = ChartFactory.getPieChartIntent(getBaseContext(), distributionSeries , defaultRenderer, "AChartEnginePieChartDemo");
 

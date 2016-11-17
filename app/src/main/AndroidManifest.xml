@@ -12,11 +12,7 @@
     <activity
     android:name=".MainActivity"
     android:label="Welcome to BONbudget">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
 </activity>
 <activity
 android:name=".LoginActivity"
@@ -37,5 +33,20 @@ android:value="@integer/google_play_services_version" /-->
 
 <activity android:name=".ListDetailActivity"
 android:label="List Item Details"></activity>
+        <activity android:name=".Activity4"
+            android:label="GraphActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.achartengine.GraphicalActivity" />
+        <activity android:name=".WalletActivity" android:label="Wallet Activity">
+
+        </activity>
+    <activity android:name=".TargetsActivity" android:label="Target Activity">
+
+    </activity>
     </application>
     </manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:background="@android:color/holo_purple">
+
+    <ListView
+        android:layout_width="356dp"
+        android:layout_height="133dp"
+        android:id="@+id/listView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="98dp"
+        android:layout_height="43dp"
+        android:text="@string/Submit"
+        android:id="@+id/submitButton"
+        android:elevation="0dp"
+        android:layout_gravity="right"
+        android:layout_weight="0.00"
+        android:layout_above="@+id/listView"
+        android:layout_alignEnd="@+id/listView"
+        android:layout_marginBottom="25dp"
+        android:layout_row="1"
+        android:layout_column="2"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="$"
+        android:hint="Balance"
+        android:ems="10"
+        android:id="@+id/balance"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="$"
+        android:hint="Budget"
+        android:id="@+id/budget"
+        android:gravity="top"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="$"
+        android:id="@+id/expence"
+        android:hint="Expence"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
