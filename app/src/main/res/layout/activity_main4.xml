@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    tools:context="com.example.justi.achartengine.Activity4">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:id="@+id/chart"
+        android:orientation="horizontal"
+
+        android:layout_height="400dp">
+
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview"
+        android:layout_toEndOf="@id/chart"/>
+    <Button
+        android:text="Data Insertion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/chart"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="445dp"
+        android:id="@+id/datainsertion"
+        android:layout_above="@+id/chart" />
+</RelativeLayout>

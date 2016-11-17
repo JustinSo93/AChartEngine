@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AChartEngine</string>
+    <string name="title_activity_data_insertion">DataInsertion</string>
+    <string name="title_activity_data">Data</string>
+</resources>
